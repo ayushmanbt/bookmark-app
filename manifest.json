@@ -1,0 +1,20 @@
+{
+    "short_name": "Bookmarks",
+    "name": "Bookmark App",
+    "icons": [{
+            "src": "icon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "iconx512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/",
+    "scope": "/",
+    "background_color": "#000000",
+    "theme_color": "#ffa500",
+    "display": "standalone"
+}
