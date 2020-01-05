@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bookmarks</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="fullscreen">
+      <nav>
+        <div class="container">
+          <h1 class="title">A simple bookmarker</h1>
+          <div class="right">
+            <a target=":blank" href="https://www.ayushmanbthakur.com/blog"
+              >Read the original post</a
+            >
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+        <form>
+          <input type="text" id="site_name" required placeholder="Site Name" />
+          <input type="text" id="site_url" required placeholder="Site URL" />
+          <input type="submit" value="Add This Site" />
+        </form>
+
+        <div id="siteList"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
