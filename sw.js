@@ -1,4 +1,4 @@
-const CACHE_NAME = "bookmark-app-cache"
+const CACHE_NAME = "bookmark-app-cache-v2"
 
 self.addEventListener("install", e => {
     e.waitUntil(
@@ -9,8 +9,6 @@ self.addEventListener("install", e => {
                     './index.html',
                     './style.css',
                     './script.js',
-                    './icon.png',
-                    './iconx512.png'
                 ]
             )
         })
