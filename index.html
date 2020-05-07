@@ -1,49 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bookmark App</title>
+    <meta name="theme-color" content="#ffa500" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="shortcut icon" href="icon.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Bookmark App</title>
-  <meta name="theme-color" content="#ffa500">
-  <link rel="manifest" href="manifest.json">
-  <link rel="shortcut icon" href="icon.png" type="image/png">
-  <link rel="stylesheet" href="style.css" />
-</head>
+  <body>
+    <div class="fullscreen">
+      <nav>
+        <div class="container">
+          <h1 class="title">A simple bookmarker</h1>
+          <div class="right">
+            <a
+              target=":blank"
+              rel="noopener noreferrer nofollow"
+              href="https://www.ayushmanbthakur.com/posts/bookmarker-with-localstorage/"
+              >Read the post</a
+            >
 
-<body>
-  <div class="fullscreen">
-    <nav>
-      <div class="container">
-        <h1 class="title">A simple bookmarker</h1>
-        <div class="right">
-          <a target=":blank" href="https://www.ayushmanbthakur.com/posts/bookmarker-with-localstorage/">Read the
-            original post</a>
+            <button id="install_button">
+              &plus;Install
+            </button>
+          </div>
         </div>
+      </nav>
+
+      <div class="container">
+        <form>
+          <input type="text" id="site_name" required placeholder="Site Name" />
+          <input type="text" id="site_url" required placeholder="Site URL" />
+          <input type="submit" value="Add This Site" />
+        </form>
+
+        <div id="siteList"></div>
       </div>
-    </nav>
-
-    <div class="container">
-      <form>
-        <input type="text" id="site_name" required placeholder="Site Name" />
-        <input type="text" id="site_url" required placeholder="Site URL" />
-        <input type="submit" value="Add This Site" />
-      </form>
-
-      <div id="siteList"></div>
     </div>
-  </div>
-  <script src="script.js"></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register("sw.js")
-        .then(sw => console.log("Service work registration successful"))
-        .catch(err => console.log("Error"))
-    } else {
-      console.log("Service Worker not supported!")
-    }
-  </script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
