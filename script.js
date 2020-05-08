@@ -64,23 +64,24 @@ if ("serviceWorker" in navigator) {
   console.log("Service Worker not supported!");
 }
 
+let haltedPrompt;
+const installButton = document.getElementById("install_button");
+
 window.addEventListener("beforeinstallprompt", (e) => {
   e.preventDefault();
-  window.deferredPrompt = e;
+  haltedPrompt = e;
   installButton.style.display = "block";
 });
 
-const installButton = document.getElementById("install_button");
 
 installButton.addEventListener("click", () => {
-  const promptEvent = window.deferredPrompt;
-  if (!promptEvent) {
+  if (!haltedPrompt) {
     return;
   }
-  promptEvent.prompt();
-  promptEvent.userChoice.then((result) => {
+  haltedPrompt.prompt();
+  haltedPrompt.userChoice.then((result) => {
     console.log("userChoice", result);
-    window.deferredPrompt = null;
+    haltedPrompt = null;
     installButton.style.display = "none";
   });
 });
