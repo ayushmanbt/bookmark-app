@@ -38,8 +38,10 @@ const render = () => {
         <div class="site">
             <h3>${site.site_name}</h3>
             <div>
-                <a href="${site.site_link}" target=":blank" class="btn">Visit Site</a>
-                <div class="del btn" onclick="del(${site.id})">Delete</>
+              <div class="row">
+                <div class="column"><a href="${site.site_link}" target=":blank" class="btn">Visit Site</a></div>
+                <div class="column"><a class="del btn" onclick="del(${site.id})">Delete</a></div>
+              </div>
             </div>
         </div>
         `;
